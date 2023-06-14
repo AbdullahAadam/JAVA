@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title>Design</title>
+	<style>
+	body{
+		background:yellow;
+		font-family:Sans;
+	}
+	table{
+		width:550px;
+		height:30px;
+		border-style:solid;
+		border-radius:35px;
+	}
+	span{
+		display:none;
+		color:red;
+	}
+	form{
+		
+	}
+	tr{
+		
+	}
+	td{
+		
+		
+			
+	}
+	lable{
+		
+	}
+	input{
+		margin:10px;
+		padding-left:10px;
+		
+	}
+	</style>
+</head>
+<body>
+	<script>
+		var name=document.getElementById("name");
+		//alert(name);
+		var ename=document.getElementById('ename');
+		var phone=document.getElementById('phone');
+		var ephone=document.getElementById('ephone');
+		var mail=document.getElementById('mail');
+		var email=document.getElementById('email');
+		function check()
+		{
+			if(name.value="")
+			{
+				name.style.border="1px solid red";
+				ename.style.display="block";
+				name.focus();
+				return false;
+			}
+			else
+			{
+				name.style.border="1px solid white";
+				ename.style.display="none";
+				return true;
+			}
+			if(name.phone="" || name.phone.value>10)
+			{
+				phone.style.border="1px solid red";
+				ephone.style.display="block";
+				phone.focus();
+				return false;
+			}
+			else
+			{
+				phone.style.border="1px solid white";
+				ephone.style.display="none";
+				return true;
+			}
+			if(mail.value="")
+			{
+				mail.style.border="1px solid red";
+				email.style.display="block";
+				mail.focus();
+				return false;
+			}
+			else
+			{
+				mail.style.border="1px solid white";
+				email.style.display="none";
+				return true;
+			}
+		}
+	</script>
+	<center><h1>Form Design</h1></center>
+	<center><h2>Application Form</h2></center>
+	<br>
+	<center><table>
+	<tr>
+	<form method="post" action="" onsubmit="return check()">
+	<td>Name</td><td><input type="text" id="name"><span id="ename">Please Enter your Name</span></td>
+	</tr>
+	<tr>
+	<td>Age</td><td><input type="number" ></td>
+	</tr>
+	<tr>
+	<td>Phone </td><td><input type="number" id="phone" maxlength="10"><span id="ephone">Please enter ur Phone Number</span></td>
+	</tr>
+	<tr>
+	<td>DOB:</td><td><input type="date" id="dob"><span id="edob">Please Enter your DOB</span></td>
+	</tr>
+	<tr>
+	<td>Gender:</td><td><input type="radio" name="gender" checked>Male <input type="radio" name="gender">Female</td>
+	</tr>
+	<tr>
+	<td>Religion:</td><td><input type="checkbox" name="region">Hindu<input type="checkbox" name="region">Christian<input type="checkbox" name="region" checked>Muslim</td>
+	</tr>
+	<tr>
+	<td>Qualification</td>
+	<td><select name="qul">
+	<Option value="Bs.Cs" selected>Bs.Cs</Option>
+	<Option value="Bs.Chemisty">Bs.Chemisty</Option>
+	<Option value="Bs.Maths" >Bs.Maths</Option>
+	<Option value="Bs.Physics">Bs.Physics</Option>
+	</select></td>
+	</tr>
+	<tr>
+	<td>Address</td><td><textarea rows="3" cols="24"></textarea></td>
+	</tr>
+	<tr>
+	<td>Email</td><td><input type="email" id="mail"><span id="email">Please Enter your Email</span></td>
+	</tr>
+	<tr>
+	<td><input type="reset" value="Reset"></td>
+	<td><input type="submit" value="Submit"></td>
+	</tr>
+	</form>
+	</table></center>
+
+</body>
+</html>
